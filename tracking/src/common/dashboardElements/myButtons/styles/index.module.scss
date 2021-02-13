@@ -1,0 +1,34 @@
+@import './palette';
+
+.elements {
+  position: relative;
+  width: 620px;
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-end;
+
+  .size {
+    position: absolute;
+    right: 0;
+  }
+
+  .element {
+    width: 26px;
+    height: 37px;
+    display: block;
+    background-color: transparent;
+    border-color: transparent;
+    background-repeat: no-repeat;
+    margin-right: 16px;
+    background-image: url("../assets/water-icon.png");
+
+    &:hover {
+      cursor: pointer;
+      background-image: url("../assets/water-icon-selected.png");
+    }
+
+    &.selected {
+      background-image: url("../assets/water-icon-selected.png");
+    }
+  }
+}

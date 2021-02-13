@@ -1,0 +1,86 @@
+@import 'palette';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+  margin-top: 30px;
+
+  .homeLink {
+    display: flex;
+    align-items: center;
+    color: $color3;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 17px;
+      background-image: url("../assets/arrow.png");
+      background-repeat: no-repeat;
+      margin-right: 10px;
+    }
+  }
+
+  .avatar {
+    display: flex;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .name {
+        font-size: 24px;
+        font-weight: 500;
+        color: $color4;
+        margin-bottom: 10px;
+      }
+
+      .logout {
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: underline;
+        color: $color5;
+        background-color: transparent;
+        border: transparent;
+        display: inline;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 72px;
+      height: 68px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-left: 10px;
+    }
+
+    &.male {
+      &::after {
+        background-image: url("../assets/male.png");
+      }
+    }
+
+    &.female {
+      &::after {
+        background-image: url("../assets/female.png");
+      }
+    }
+  }
+}

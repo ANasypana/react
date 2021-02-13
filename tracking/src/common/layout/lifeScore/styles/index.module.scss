@@ -1,0 +1,96 @@
+@import './palette';
+
+.widget {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    text-transform: uppercase;
+    color: $color8;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+  }
+
+  .module {
+    position: relative;
+    height: 612px;
+
+    .score {
+      background-color: $color4;
+      color: $color2;
+      font-weight: 500;
+      font-size: 24px;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: -90px;
+      transform: translateY(50%);
+    }
+
+    .progress {
+      position: relative;
+      background-color: $color9;
+      width: 56px;
+      height: 100%;
+      border-radius: 28px;
+      overflow: hidden;
+
+      .fill {
+        position: absolute;
+        bottom: 0;
+        background-color: $color4;
+        width: 100%;
+      }
+    }
+
+    .label {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      width: 150px;
+      left: 70px;
+      text-transform: uppercase;
+      color: $color3;
+      font-size: 12px;
+      font-weight: 500;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: $color10;
+        margin-right: 14px;
+      }
+
+      &.level1 {
+        bottom: 5%;
+      }
+
+      &.level2 {
+        bottom: 38%;
+      }
+
+      &.level3 {
+        bottom: 66%;
+      }
+
+      &.level4 {
+        bottom: 80%;
+      }
+
+      &.level5 {
+        bottom: 95%;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,26 @@
+@import './palette';
+
+.answer {
+  color: $color3;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 14px;
+  margin-right: 30px;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &.selected {
+    text-decoration: none;
+    background-color: $color3;
+    color: $color2;
+    border-radius: 3px;
+    padding: 7px 16px;
+
+    &:hover {
+      cursor: initial;
+    }
+  }
+}

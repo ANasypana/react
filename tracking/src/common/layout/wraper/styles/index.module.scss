@@ -1,0 +1,29 @@
+@import './palette';
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Roboto';
+
+  .sidebar {
+    width: 499px;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &.female {
+      background-image: url('../assets/woman.png');
+    }
+
+    &.male {
+      background-image: url('../assets/man.png');
+    }
+  }
+
+  .wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
